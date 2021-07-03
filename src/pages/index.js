@@ -3,11 +3,10 @@ import { About, Contact, Landing, Layout, Projects } from "../components"
 
 export default function Index() {
   return (
-    <div>
+    <Layout>
       <Landing />
-      <About />
-      <Contact />
       <Projects />
-    </div>
+      <Contact />
+    </Layout>
   )
 }
