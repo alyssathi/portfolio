@@ -1,5 +1,13 @@
 import React from "react"
+import { About, Contact, Landing, Layout, Projects } from "../components"
 
-export default function Home() {
-  return <div>Hello world!</div>
+export default function Index() {
+  return (
+    <div>
+      <Landing />
+      <About />
+      <Contact />
+      <Projects />
+    </div>
+  )
 }
