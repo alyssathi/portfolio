@@ -4,11 +4,12 @@ import { Button } from "../button"
 
 export function Contact() {
   return (
-    <div className={contactStyles.container}>
+    <div id="contact" className={contactStyles.container}>
       <h3>Contact & Socials</h3>
       <div className={contactStyles.buttonContainer}>
         <Button
           buttonName="Email"
+          className={contactStyles.email}
           target="_blank"
           buttonFunction="mailto:aruefenacht14@gmail.com"
         />

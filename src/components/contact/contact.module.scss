@@ -1,9 +1,17 @@
-.container {
-  margin: 1rem;
-  padding: 0.5rem;
+$pastel-purple: #9f8fb0;
+$pastel-pink: #f4c2be;
+$pastel-yellow: #fff4d1;
+$pastel-blue: #9bd2cd;
+$pastel-orange: #ffdeafe1;
+
+.button-container {
   display: flex;
+  margin: 1rem;
   flex-direction: column;
   min-height: 90vh;
-  justify-content: space-around;
   align-items: center;
+}
+
+.container {
+  margin: 1rem;
 }

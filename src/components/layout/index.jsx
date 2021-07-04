@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "./header"
+import { Header } from "./header"
 import "./layout.scss"
 
 export function Layout({ children }) {
@@ -8,7 +8,7 @@ export function Layout({ children }) {
       <header>
         <Header />
       </header>
-      <body>
+      <body style={{ marginTop: "5rem" }}>
         <main>{children}</main>
         <footer>Made by Alyssa</footer>
       </body>
