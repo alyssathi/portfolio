@@ -1,16 +1,26 @@
+@mixin respond($size) {
+  @if $size == tablet-landscape {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
 .container {
   border: black 0.5rem solid;
   padding: 0.5rem;
   width: 32.5%;
   height: 70vh;
+
+  @include respond(tablet-landscape) {
+    height: 50vh;
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
   margin-top: 0.5rem;
-}
-
-.emails {
-  min-width: 30vw;
 }

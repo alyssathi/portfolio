@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
 
+@mixin respond($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+}
+
 $pastel-purple: 9f8fb0;
 $pastel-pink: F4C2BE;
 $pastel-yellow: FFF4D1;
@@ -16,17 +32,67 @@ $pastel-blue: 9bd2cd;
   margin: 1rem;
 }
 
-h3 {
-  font-size: 3rem;
+h1 {
+  font-weight: 300;
+  @include respond(phone-only) {
+    font-size: 3rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 4rem;
+  }
+  @include respond(tablet-landscape) {
+    font-size: 6em;
+  }
+}
+
+h2 {
   font-weight: 200;
+  @include respond(phone-only) {
+    font-size: 2rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 2.5rem;
+  }
+  @include respond(tablet-landscape) {
+    font-size: 3em;
+  }
+}
+
+h3 {
+  font-weight: 200;
+  @include respond(phone-only) {
+    font-size: 2rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 2.5rem;
+  }
+  @include respond(tablet-landscape) {
+    font-size: 3em;
+  }
 }
 
 h4 {
-  font-size: 2rem;
   font-weight: 170;
+  @include respond(phone-only) {
+    font-size: 1.5rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 1.7rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 2em;
+  }
 }
 
 p {
-  font-size: 1.4rem;
   font-weight: 150;
+  @include respond(phone-only) {
+    font-size: 1rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 1.2rem;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 1.4em;
+  }
 }

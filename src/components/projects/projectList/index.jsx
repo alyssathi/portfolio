@@ -9,6 +9,7 @@ export function ProjectList() {
       {projectsArray.map(project => {
         return (
           <ProjectCard
+            key={project.title}
             title={project.title}
             description={project.description}
             live={project.live}

@@ -3,10 +3,10 @@ import * as landingStyles from "./landing.module.scss"
 export function Landing() {
   return (
     <div id="landing" className={landingStyles.container}>
-      <h1 className={landingStyles.h1Title}>
+      <h1>
         Hi there, I'm <span className={landingStyles.h1TitleBold}>Alyssa</span>.
       </h1>
-      <h2 className={landingStyles.h2Title}>
+      <h2>
         I'm a <span className={landingStyles.fed}>frontend developer</span>{" "}
         based in <span className={landingStyles.perth}>Perth</span> looking to
         be a part of a team that creates{" "}

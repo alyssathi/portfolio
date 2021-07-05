@@ -4,20 +4,34 @@ $pastel-yellow: #fff4d1;
 $pastel-blue: #9bd2cd;
 $pastel-orange: #ffdeafe1;
 
+@mixin respond($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
+
 .button-container {
   display: flex;
   flex-direction: column;
   width: 50vw;
+
+  @include respond(phone-only) {
+    width: 100vw;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   margin: 1rem;
-  margin-top: 2rem;
   align-items: center;
 }
 
 .title {
   align-self: flex-start;
+  @include respond(phone-only) {
+    align-self: center;
+  }
 }

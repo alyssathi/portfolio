@@ -1,5 +1,18 @@
+@mixin respond($size) {
+  @if $size == tablet-landscape {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include respond(tablet-landscape) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
