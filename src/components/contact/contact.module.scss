@@ -6,12 +6,18 @@ $pastel-orange: #ffdeafe1;
 
 .button-container {
   display: flex;
-  margin: 1rem;
   flex-direction: column;
-  min-height: 90vh;
-  align-items: center;
+  width: 50vw;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.title {
+  align-self: flex-start;
 }

@@ -1,10 +1,11 @@
 import React from "react"
 import { projectsArray } from "./projectsArray"
 import { ProjectCard } from "../projectCard"
+import * as projectListStyles from "./projectList.module.scss"
 
 export function ProjectList() {
   return (
-    <div>
+    <div className={projectListStyles.container}>
       {projectsArray.map(project => {
         return (
           <ProjectCard

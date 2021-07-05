@@ -1,15 +1,16 @@
 .container {
   border: black 0.5rem solid;
   padding: 0.5rem;
-  margin: 0.5rem;
+  width: 32.5%;
+  height: 70vh;
 }
 
 .button-container {
   display: flex;
-  margin: 0.5rem;
-  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 0.5rem;
 }
 
-.button-styles {
-  border: 0.5rem solid red;
+.emails {
+  min-width: 30vw;
 }
