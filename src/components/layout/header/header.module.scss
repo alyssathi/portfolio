@@ -26,12 +26,16 @@ $pastel-blue: #9bd2cd;
   padding: 0.5rem 1rem;
   border: 0.3rem solid black;
   margin-right: 2rem;
+  text-decoration: none;
+  color: black;
 }
 
 .list-item-left {
   list-style: none;
   padding: 0.5rem 1rem;
   border: 0.3rem solid black;
+  text-decoration: none;
+  color: black;
 }
 
 .list-item-text:visited {
