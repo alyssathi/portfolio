@@ -3,6 +3,8 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import * as headerStyles from "./header.module.scss"
 
 export function Header() {
+  const logo = require("../../../../static/favicon.ico")
+
   return (
     <header className={headerStyles.headerContainer}>
       <nav>
@@ -10,7 +12,11 @@ export function Header() {
           <div className={headerStyles.listContainerLeft}>
             <li className={headerStyles.listItemLeft}>
               <AnchorLink to="/#landing" className={headerStyles.listItemText}>
-                AlyssaThi
+                <img
+                  src={logo}
+                  className={headerStyles.image}
+                  alt="Logo for AlyssaThi.dev"
+                />
               </AnchorLink>
             </li>
           </div>
