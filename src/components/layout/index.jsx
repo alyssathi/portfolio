@@ -6,10 +6,10 @@ import "./layout.scss"
 export function Layout({ children }) {
   return (
     <>
-      <header>
-        <Header />
-      </header>
       <body style={{ marginTop: "5rem" }}>
+        <header>
+          <Header />
+        </header>
         <main>{children}</main>
       </body>
       <footer>

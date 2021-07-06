@@ -1,9 +1,3 @@
-$pastel-purple: #9f8fb0;
-$pastel-pink: #f4c2be;
-$pastel-yellow: #fff4d1;
-$pastel-blue: #9bd2cd;
-$pastel-orange: #ffdeafe1;
-
 @mixin respond($size) {
   @if $size == phone-only {
     @media (max-width: 599px) {

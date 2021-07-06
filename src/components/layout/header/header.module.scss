@@ -21,12 +21,18 @@ $pastel-blue: #9bd2cd;
 }
 
 .image {
+  border: 0.3rem solid black;
   max-height: 8vh;
+}
+
+.image:hover {
+  background-color: $pastel-yellow;
 }
 
 .list-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: black;
 }
 
@@ -38,11 +44,10 @@ $pastel-blue: #9bd2cd;
   list-style: none;
   padding: 0.5rem 1rem;
   border: 0.3rem solid black;
+  align-items: center;
   margin-left: 2rem;
   text-decoration: none;
   color: black;
-  display: flex;
-  align-items: center;
 
   @include respond(tablet-landscape) {
     display: none;
@@ -81,6 +86,7 @@ $pastel-blue: #9bd2cd;
   display: none;
   @include respond(tablet-landscape) {
     display: block;
+    margin-left: 2rem;
   }
 }
 
@@ -88,6 +94,18 @@ $pastel-blue: #9bd2cd;
   padding: 0.5rem;
   border: 0.3rem solid black;
   background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.modal-button:hover {
+  background-color: $pastel-yellow;
+}
+
+.list-item-darkmode {
+  list-style: none;
+  text-decoration: none;
   color: black;
   display: flex;
   align-items: center;

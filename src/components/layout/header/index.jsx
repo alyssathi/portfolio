@@ -4,6 +4,7 @@ import * as headerStyles from "./header.module.scss"
 import { useState } from "react"
 import { Modal } from "../.."
 import { GiHamburgerMenu } from "react-icons/gi"
+import { DarkMode } from "../darkMode"
 
 export function Header() {
   const logo = require("../../../../static/favicon.ico")
@@ -15,28 +16,25 @@ export function Header() {
     <header className={headerStyles.headerContainer}>
       <nav>
         <ul className={headerStyles.listContainer}>
-          <div className={headerStyles.listContainerLeft}>
+          <AnchorLink to="/#landing">
             <li className={headerStyles.listItemLeft}>
-              <AnchorLink to="/#landing" className={headerStyles.listItemText}>
-                <img
-                  src={logo}
-                  className={headerStyles.image}
-                  alt="Logo for AlyssaThi.dev"
-                />
-              </AnchorLink>
+              <img
+                src={logo}
+                className={headerStyles.image}
+                alt="Logo for AlyssaThi.dev"
+              />
             </li>
-          </div>
+          </AnchorLink>
           <div className={headerStyles.listContainerRight}>
-            <li className={headerStyles.listItemRight}>
-              <AnchorLink to="/#projects" className={headerStyles.listItemText}>
-                Projects
-              </AnchorLink>
+            <li className={headerStyles.listItemDarkmode}>
+              <DarkMode />
             </li>
-            <li className={headerStyles.listItemRight}>
-              <AnchorLink to="/#contact" className={headerStyles.listItemText}>
-                Contact
-              </AnchorLink>
-            </li>
+            <AnchorLink to="/#projects" className={headerStyles.listItemText}>
+              <li className={headerStyles.listItemRight}>Projects</li>
+            </AnchorLink>
+            <AnchorLink to="/#contact" className={headerStyles.listItemText}>
+              <li className={headerStyles.listItemRight}>Contact</li>
+            </AnchorLink>
             <li className={headerStyles.phoneMenu}>
               <button
                 className={headerStyles.modalButton}
@@ -47,29 +45,29 @@ export function Header() {
               <Modal open={isMenuOpen} onClose={closeMenu}>
                 <div>
                   <ul>
-                    <li
+                    <AnchorLink
+                      to="/#projects"
                       onClick={closeMenu}
-                      className={headerStyles.listItemRightMenu}
+                      className={headerStyles.listItemText}
                     >
-                      <AnchorLink
-                        to="/#projects"
+                      <li
                         onClick={closeMenu}
-                        className={headerStyles.listItemText}
+                        className={headerStyles.listItemRightMenu}
                       >
                         Projects
-                      </AnchorLink>
-                    </li>
-                    <li
-                      onClick={closeMenu}
-                      className={headerStyles.listItemRightMenu}
+                      </li>
+                    </AnchorLink>
+                    <AnchorLink
+                      to="/#contact"
+                      className={headerStyles.listItemText}
                     >
-                      <AnchorLink
-                        to="/#contact"
-                        className={headerStyles.listItemText}
+                      <li
+                        onClick={closeMenu}
+                        className={headerStyles.listItemRightMenu}
                       >
                         Contact
-                      </AnchorLink>
-                    </li>
+                      </li>
+                    </AnchorLink>
                   </ul>
                 </div>
               </Modal>
