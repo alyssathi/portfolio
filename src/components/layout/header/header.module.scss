@@ -3,6 +3,14 @@ $pastel-pink: #f4c2be;
 $pastel-yellow: #fff4d1;
 $pastel-blue: #9bd2cd;
 
+@mixin respond($size) {
+  @if $size == tablet-landscape {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
 .header-container {
   padding: 1rem;
   background-color: #fffffff5;
@@ -19,6 +27,7 @@ $pastel-blue: #9bd2cd;
 .list-container {
   display: flex;
   justify-content: space-between;
+  color: black;
 }
 
 .list-container-right {
@@ -34,19 +43,52 @@ $pastel-blue: #9bd2cd;
   color: black;
   display: flex;
   align-items: center;
+
+  @include respond(tablet-landscape) {
+    display: none;
+  }
 }
 
 .list-item-left {
   list-style: none;
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .list-item-text:visited {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .list-item-right:hover {
   background-color: $pastel-yellow;
+}
+
+.list-item-right-menu {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border: 0.3rem solid black;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.list-item-right-menu:first-child {
+  margin-bottom: 0.4rem;
+}
+
+.phone-menu {
+  display: none;
+  @include respond(tablet-landscape) {
+    display: block;
+  }
+}
+
+.modal-button {
+  padding: 0.5rem;
+  border: 0.3rem solid black;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
 }
