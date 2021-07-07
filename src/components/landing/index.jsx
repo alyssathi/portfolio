@@ -1,8 +1,19 @@
 import React from "react"
+import { useContext } from "react"
 import * as landingStyles from "./landing.module.scss"
+import { ThemeContext, themeHelper } from "./../../pages/index"
+
 export function Landing() {
+  const [theme] = useContext(ThemeContext)
   return (
-    <div id="landing" className={landingStyles.container}>
+    <div
+      id="landing"
+      className={`${landingStyles.container} ${themeHelper(
+        theme,
+        landingStyles.containerDark,
+        null
+      )}`}
+    >
       <h1>
         Hi there, I'm <span className={landingStyles.h1TitleBold}>Alyssa</span>.
       </h1>

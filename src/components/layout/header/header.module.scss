@@ -3,12 +3,26 @@ $pastel-pink: #f4c2be;
 $pastel-yellow: #fff4d1;
 $pastel-blue: #9bd2cd;
 
+@mixin item-dark {
+  border: 0.3rem solid white;
+  color: white;
+}
+
 @mixin respond($size) {
   @if $size == tablet-landscape {
     @media (max-width: 1000px) {
       @content;
     }
   }
+}
+
+@mixin item-container {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  border: 0.3rem solid black;
+  align-items: center;
+  color: black;
+  text-decoration: none;
 }
 
 .header-container {
@@ -20,13 +34,25 @@ $pastel-blue: #9bd2cd;
   height: 13vh;
 }
 
+.header-container-dark {
+  background-color: #2f3d54f8;
+}
+
 .image {
   border: 0.3rem solid black;
   max-height: 8vh;
 }
 
+.image-dark {
+  @include item-dark();
+}
+
 .image:hover {
   background-color: $pastel-yellow;
+}
+
+.image-dark:hover {
+  background-color: $pastel-purple;
 }
 
 .list-container {
@@ -41,17 +67,16 @@ $pastel-blue: #9bd2cd;
 }
 
 .list-item-right {
-  list-style: none;
-  padding: 0.5rem 1rem;
-  border: 0.3rem solid black;
-  align-items: center;
+  @include item-container();
   margin-left: 2rem;
-  text-decoration: none;
-  color: black;
 
   @include respond(tablet-landscape) {
     display: none;
   }
+}
+
+.list-item-right-dark {
+  @include item-dark();
 }
 
 .list-item-left {
@@ -70,14 +95,26 @@ $pastel-blue: #9bd2cd;
 }
 
 .list-item-right-menu {
-  list-style: none;
-  padding: 0.5rem 1rem;
-  border: 0.3rem solid black;
-  text-decoration: none;
-  color: black;
+  @include item-container();
   display: flex;
   align-items: center;
 }
+
+.list-item-right-menu:hover {
+  background-color: $pastel-yellow;
+}
+
+.list-item-right-menu-dark:hover {
+  background-color: $pastel-purple;
+}
+
+.list-item-right-menu-dark {
+  @include item-dark();
+}
+.list-item-right-dark:hover {
+  background-color: $pastel-purple;
+}
+
 .list-item-right-menu:first-child {
   margin-bottom: 0.4rem;
 }
@@ -93,20 +130,25 @@ $pastel-blue: #9bd2cd;
 .modal-button {
   padding: 0.5rem;
   border: 0.3rem solid black;
-  background-color: white;
-  color: black;
+  background-color: transparent;
   display: flex;
   align-items: center;
+}
+
+.modal-button-dark {
+  @include item-dark();
 }
 
 .modal-button:hover {
   background-color: $pastel-yellow;
 }
 
+.modal-button-dark:hover {
+  background-color: $pastel-purple;
+}
+
 .list-item-darkmode {
   list-style: none;
-  text-decoration: none;
-  color: black;
   display: flex;
   align-items: center;
 }
