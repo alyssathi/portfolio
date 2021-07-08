@@ -18,16 +18,48 @@ export function Landing() {
         Hi there, I'm <span className={landingStyles.h1TitleBold}>Alyssa</span>.
       </h1>
       <h2>
-        I'm a <span className={landingStyles.fed}>frontend developer</span>{" "}
-        based in <span className={landingStyles.perth}>Perth</span> looking to
-        be a part of a team that creates{" "}
-        <span className={landingStyles.functional}>
+        I'm a{" "}
+        <span
+          className={`${landingStyles.fed} ${themeHelper(
+            theme,
+            landingStyles.fedDark,
+            null
+          )}`}
+        >
+          frontend developer
+        </span>{" "}
+        based in{" "}
+        <span
+          className={`${landingStyles.perth} ${themeHelper(
+            theme,
+            landingStyles.perthDark,
+            null
+          )}`}
+        >
+          Perth
+        </span>{" "}
+        looking to be a part of a team that creates{" "}
+        <span
+          className={`${landingStyles.functional} ${themeHelper(
+            theme,
+            landingStyles.functionalDark,
+            null
+          )}`}
+        >
           {" "}
           responsive & functional
         </span>{" "}
         user interfaces using{" "}
-        <span className={landingStyles.react}>React/Typescript</span> and
-        related frameworks.
+        <span
+          className={`${landingStyles.react} ${themeHelper(
+            theme,
+            landingStyles.reactDark,
+            null
+          )}`}
+        >
+          React/Typescript
+        </span>{" "}
+        and related frameworks.
       </h2>
     </div>
   )

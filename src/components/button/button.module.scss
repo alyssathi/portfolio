@@ -1,5 +1,5 @@
 $pastel-yellow: #fff4d1;
-$pastel-purple: #9f8fb0;
+$dark-purple: #5a4b6b;
 
 .button-container {
   border: 0.5rem black solid;
@@ -22,5 +22,5 @@ $pastel-purple: #9f8fb0;
 }
 
 .button-container-dark:hover {
-  background-color: $pastel-purple;
+  background-color: $dark-purple;
 }

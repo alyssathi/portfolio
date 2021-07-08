@@ -1,7 +1,5 @@
-$pastel-purple: #9f8fb0;
-$pastel-pink: #f4c2be;
 $pastel-yellow: #fff4d1;
-$pastel-blue: #9bd2cd;
+$dark-purple: #5a4b6b;
 
 @mixin item-dark {
   border: 0.3rem solid white;
@@ -52,7 +50,7 @@ $pastel-blue: #9bd2cd;
 }
 
 .image-dark:hover {
-  background-color: $pastel-purple;
+  background-color: $dark-purple;
 }
 
 .list-container {
@@ -106,14 +104,14 @@ $pastel-blue: #9bd2cd;
 }
 
 .list-item-right-menu-dark:hover {
-  background-color: $pastel-purple;
+  background-color: $dark-purple;
 }
 
 .list-item-right-menu-dark {
   @include item-dark();
 }
 .list-item-right-dark:hover {
-  background-color: $pastel-purple;
+  background-color: $dark-purple;
 }
 
 .list-item-right-menu:first-child {
@@ -145,7 +143,7 @@ $pastel-blue: #9bd2cd;
 }
 
 .modal-button-dark:hover {
-  background-color: $pastel-purple;
+  background-color: $dark-purple;
 }
 
 .list-item-darkmode {

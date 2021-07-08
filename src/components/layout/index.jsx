@@ -3,6 +3,7 @@ import { useContext } from "react"
 import { Header } from "./header"
 import { Footer } from "./footer"
 import { ThemeContext, themeHelper } from "../../pages"
+import { Seo } from "../seo"
 import "./layout.scss"
 
 export function Layout({ children }) {
@@ -18,6 +19,7 @@ export function Layout({ children }) {
 
   return (
     <>
+      <Seo />
       <body style={darkModeBody}>
         <header>
           <Header />

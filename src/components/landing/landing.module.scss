@@ -1,8 +1,11 @@
 $pastel-purple: #9f8fb0;
 $pastel-pink: #f4c2be;
-$pastel-yellow: #fff4d1;
 $pastel-blue: #9bd2cd;
 $pastel-orange: #ffdeafe1;
+$dark-purple: #5a4b6b;
+$dark-pink: #965f5b;
+$dark-blue: #4c7572;
+$dark-orange: #a56000e1;
 
 .container {
   margin: 1rem;
@@ -40,4 +43,20 @@ $pastel-orange: #ffdeafe1;
 
 .react {
   background-color: $pastel-blue;
+}
+
+.fed-dark {
+  background-color: $dark-pink;
+}
+
+.perth-dark {
+  background-color: $dark-purple;
+}
+
+.functional-dark {
+  background-color: $dark-orange;
+}
+
+.react-dark {
+  background-color: $dark-blue;
 }

@@ -24,9 +24,9 @@ export function Header() {
       )}`}
     >
       <nav>
-        <ul className={headerStyles.listContainer}>
+        <div className={headerStyles.listContainer}>
           <AnchorLink to="/#landing">
-            <li className={headerStyles.listItemLeft}>
+            <div className={headerStyles.listItemLeft}>
               <img
                 src={themeHelper(theme, logoDark, logo)}
                 className={`${headerStyles.image} ${themeHelper(
@@ -36,14 +36,14 @@ export function Header() {
                 )}`}
                 alt="Logo for AlyssaThi.dev"
               />
-            </li>
+            </div>
           </AnchorLink>
           <div className={headerStyles.listContainerRight}>
-            <li className={headerStyles.listItemDarkmode}>
+            <div className={headerStyles.listItemDarkmode}>
               <DarkMode />
-            </li>
+            </div>
             <AnchorLink to="/#projects" className={headerStyles.listItemText}>
-              <li
+              <div
                 className={`${headerStyles.listItemRight} ${themeHelper(
                   theme,
                   headerStyles.listItemRightDark,
@@ -51,10 +51,10 @@ export function Header() {
                 )}`}
               >
                 Projects
-              </li>
+              </div>
             </AnchorLink>
             <AnchorLink to="/#contact" className={headerStyles.listItemText}>
-              <li
+              <div
                 className={`${headerStyles.listItemRight} ${themeHelper(
                   theme,
                   headerStyles.listItemRightDark,
@@ -62,10 +62,11 @@ export function Header() {
                 )}`}
               >
                 Contact
-              </li>
+              </div>
             </AnchorLink>
-            <li className={headerStyles.phoneMenu}>
+            <div className={headerStyles.phoneMenu}>
               <button
+                aria-label="Hamburger Menu"
                 className={`${headerStyles.modalButton} ${themeHelper(
                   theme,
                   headerStyles.modalButtonDark,
@@ -80,12 +81,12 @@ export function Header() {
               </button>
               <Modal open={isMenuOpen} onClose={closeMenu}>
                 <div>
-                  <ul>
+                  <div>
                     <AnchorLink
                       to="/#landing"
                       className={headerStyles.listItemText}
                     >
-                      <li
+                      <div
                         onClick={closeMenu}
                         className={`${
                           headerStyles.listItemRightMenu
@@ -96,14 +97,14 @@ export function Header() {
                         )}`}
                       >
                         Home
-                      </li>
+                      </div>
                     </AnchorLink>
                     <AnchorLink
                       to="/#projects"
                       onClick={closeMenu}
                       className={headerStyles.listItemText}
                     >
-                      <li
+                      <div
                         onClick={closeMenu}
                         className={`${
                           headerStyles.listItemRightMenu
@@ -114,13 +115,13 @@ export function Header() {
                         )}`}
                       >
                         Projects
-                      </li>
+                      </div>
                     </AnchorLink>
                     <AnchorLink
                       to="/#contact"
                       className={headerStyles.listItemText}
                     >
-                      <li
+                      <div
                         onClick={closeMenu}
                         className={`${
                           headerStyles.listItemRightMenu
@@ -131,14 +132,14 @@ export function Header() {
                         )}`}
                       >
                         Contact
-                      </li>
+                      </div>
                     </AnchorLink>
-                  </ul>
+                  </div>
                 </div>
               </Modal>
-            </li>
+            </div>
           </div>
-        </ul>
+        </div>
       </nav>
     </header>
   )
