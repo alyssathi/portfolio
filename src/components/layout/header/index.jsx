@@ -82,6 +82,23 @@ export function Header() {
                 <div>
                   <ul>
                     <AnchorLink
+                      to="/#landing"
+                      className={headerStyles.listItemText}
+                    >
+                      <li
+                        onClick={closeMenu}
+                        className={`${
+                          headerStyles.listItemRightMenu
+                        } ${themeHelper(
+                          theme,
+                          headerStyles.listItemRightMenuDark,
+                          null
+                        )}`}
+                      >
+                        Home
+                      </li>
+                    </AnchorLink>
+                    <AnchorLink
                       to="/#projects"
                       onClick={closeMenu}
                       className={headerStyles.listItemText}
