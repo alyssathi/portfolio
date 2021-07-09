@@ -15,6 +15,10 @@ export function Seo() {
       />
       <meta property="og:type" content="website" />
       <html lang="en" amp />
+      <meta
+        name="google-site-verification"
+        content="google-site-verification=5MM3SSRtOixdmlNjEvCUQHJKCgozYxoR_Woyw4BQHU4"
+      />
     </Helmet>
   )
 }
