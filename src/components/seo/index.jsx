@@ -8,10 +8,10 @@ export function Seo() {
         lang: "en",
       }}
     >
-      <title>Alyssa Thi Portfolio</title>
+      <title>Alyssa Thi Portfolio | Frontend Web Developer</title>
       <meta
         name="description"
-        content="Alyssa Thi's portfolio for web development. You'll find contact information and a gateway to other projects."
+        content="Alyssa Thi's portfolio for frontend web development. You'll find contact information and a gateway to other projects."
       />
       <meta property="og:type" content="website" />
       <html lang="en" amp />
