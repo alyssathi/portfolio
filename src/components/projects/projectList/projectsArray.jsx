@@ -5,7 +5,7 @@ export const projectsArray = [
       "A working chat application using Create-React-App and Firebase. You can store contacts and have a private conversation via a custom ID. Type in a fake email and password to sign up and get chatting.",
     moreInfo: "more info on project 1",
     repo: "reactChat",
-    live: "https://reactchat-dev.web.app/login",
+    live: "https://reactchat-dev.firebaseapp.com",
   },
   {
     title: "Project 2",

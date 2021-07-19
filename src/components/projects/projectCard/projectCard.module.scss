@@ -10,7 +10,6 @@
   border: black 0.5rem solid;
   padding: 0.5rem;
   width: 32.5%;
-  height: 70vh;
 
   @include respond(tablet-landscape) {
     width: 100%;
@@ -27,4 +26,8 @@
   flex-direction: column;
   margin-top: 0.5rem;
   height: min-content;
+}
+
+.button-styles {
+  font-size: 1rem;
 }

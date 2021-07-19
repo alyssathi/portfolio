@@ -22,13 +22,13 @@ export function ProjectCard({ title, description, moreInfo, repo, live }) {
       <div className={projectCardStyles.buttonContainer}>
         <Button
           className={projectCardStyles.buttonStyles}
-          buttonName={<p>Live</p>}
+          buttonName={<p style={{ fontSize: "1.5rem" }}>Live</p>}
           target="_blank"
           buttonFunction={live}
         />
         <Button
           className={projectCardStyles.buttonStyles}
-          buttonName={<p>Repo</p>}
+          buttonName={<p style={{ fontSize: "1.5rem" }}>Repo</p>}
           target="_blank"
           buttonFunction={`https://github.com/alyssathi/${repo}`}
         />
