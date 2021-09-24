@@ -26,7 +26,7 @@ export function Landing() {
             null
           )}`}
         >
-          frontend developer
+          fullstack developer
         </span>{" "}
         based in{" "}
         <span
@@ -57,9 +57,9 @@ export function Landing() {
             null
           )}`}
         >
-          React/Typescript
+          React, Typescript, Golang & SQL
         </span>{" "}
-        and related frameworks.
+        .
       </h2>
     </div>
   )
