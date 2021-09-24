@@ -30,7 +30,7 @@ export function ProjectCard({ title, description, moreInfo, repo, live }) {
           className={projectCardStyles.buttonStyles}
           buttonName={<p style={{ fontSize: "1.5rem" }}>Repo</p>}
           target="_blank"
-          buttonFunction={`https://github.com/alyssathi/${repo}`}
+          buttonFunction={`https://github.com/${repo}`}
         />
       </div>
     </div>
